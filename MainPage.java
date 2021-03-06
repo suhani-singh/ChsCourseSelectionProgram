@@ -59,13 +59,13 @@ public class MainPage extends JFrame{
 		//start button
 		
 		a =new JButton("Start");//creating instance of JButton  
-		       
 		frame1.add(a);//adding button in JFrame
-		          
-		b=new JButton("Instructions");//creating instance of JButton  
-		          
+		a.addActionListener(new choiceListener());
+		
+		b=new JButton("Instructions");//creating instance of JButton          
 		frame1.add(b, BorderLayout.CENTER);//adding button in JFrame  
-		b.addActionListener(new choiceListener());          
+		b.addActionListener(new choiceListener());  
+		
 		frame1.setVisible(true);//making the frame visible
 	}
 	
@@ -74,6 +74,10 @@ public class MainPage extends JFrame{
 			if (e.getSource() == b) {
 				frame1.setVisible(false);//making the frame visible
 				new infoPage();
+			} 
+			if (e.getSource() == a) {
+				frame1.setVisible(false);//making the frame visible
+				new DataGrade();
 			}
 		}
 	}
