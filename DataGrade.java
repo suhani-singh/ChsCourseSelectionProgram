@@ -24,7 +24,7 @@ public class DataGrade extends JFrame{
 	
 	public DataGrade() {
 		frame3 = new JFrame("CHS Course Selection Program");
-		frame3.setLayout(new GridLayout(7, 1));
+		frame3.setLayout(new GridLayout(6, 1));
 		frame3.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		//set size
@@ -56,16 +56,22 @@ public class DataGrade extends JFrame{
 		frame3.add(g11);
 		frame3.add(g12);
 		
+		//add Jpanel
+		JPanel bottom = new JPanel();
+		bottom.setLayout(new GridLayout(1, 2));
+		
 		//next button
-				next =new JButton("Next");//creating instance of JButton  
-				next.addActionListener(new choiceListener()); 
-				frame3.add(next);//adding button in JFrame
+		next =new JButton("Next");//creating instance of JButton  
+		next.addActionListener(new choiceListener()); 
 		
 		//back button
 		back =new JButton("Back");//creating instance of JButton  
 		back.addActionListener(new choiceListener()); 
-		frame3.add(back);//adding button in JFrame
-		       
+		
+		bottom.add(back);//adding button in JFrame
+		bottom.add(next);//adding button in JFrame
+		  
+		frame3.add(bottom);
 		frame3.setVisible(true);//making the frame visible
 	}
 	

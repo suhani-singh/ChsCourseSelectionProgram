@@ -102,21 +102,15 @@ public class DataGradType extends JFrame{
 			}
 			if(e.getSource() == wit) { //create image frame
 				frameImage = new JFrame("CHS Course Selection Program");
-				frameImage.setLayout(new GridLayout(2, 1));
+				frameImage.setLayout(new GridLayout(1, 1));
 				frameImage.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				
 				//set size
-				frameImage.setSize(WINDOW_WIDTH/2, WINDOW_HEIGHT/3);		
-				
-				//make label
-				String text = "Here is the info:";
-				JLabel label = new JLabel("<html><div style='text-align: center;'>" + text + "</div></html>");
-				frameImage.add(label);//adding button in JFrame
+				frameImage.setSize(492, 619);		
 				
 				JLabel labelImg = new JLabel("");
-				ImageIcon logo = new ImageIcon(("src\\gradReqs.jpg"));
+				ImageIcon logo = new ImageIcon(("src\\gradReqs.png"));
 				Image image = logo.getImage();
-				image = image.getScaledInstance(500/3, 500/3, Image.SCALE_SMOOTH);
 				ImageIcon pic = new ImageIcon(image);
 				labelImg.setIcon(pic);
 				

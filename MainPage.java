@@ -57,9 +57,20 @@ public class MainPage extends JFrame{
 		frame1.add(label);
 		
 		//start button
-		
 		a =new JButton("Start");//creating instance of JButton  
-		frame1.add(a);//adding button in JFrame
+		JPanel aPanel = new JPanel();
+		aPanel.setBackground(Color.WHITE);
+		int x = a.getX();
+		int y = a.getY();
+		a.setSize(WINDOW_WIDTH/2, WINDOW_HEIGHT/2);
+		a.setAlignmentX(x+10);
+		a.setAlignmentY(y+10);
+	   	frame1.getContentPane().add(aPanel, "Center"); // Paste MyPanel in cent
+		
+		
+		aPanel.add(a);//adding button in JFrame
+		
+		frame1.add(aPanel);
 		a.addActionListener(new choiceListener());
 		
 		b=new JButton("Instructions");//creating instance of JButton          
